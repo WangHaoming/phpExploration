@@ -1,0 +1,16 @@
+version: '3'
+services:
+  api:
+    build: .
+    image: apache-php7
+    ports:
+    - "8000:80"
+    volumes:
+#    php root
+    - ../src:/var/www/html
+#    config files
+    - ./php:/etc/php
+    - ./apache2:/etc/apache2
+#    env_file:
+#    - ripple-api.env
+    container_name: php-exploration
