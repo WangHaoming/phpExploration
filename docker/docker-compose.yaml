@@ -11,6 +11,7 @@ services:
 #    config files
     - ./php:/etc/php
     - ./apache2:/etc/apache2
+    - ./bash/.bash_history:/root/.bash_history
 #    env_file:
 #    - ripple-api.env
     container_name: php-exploration
